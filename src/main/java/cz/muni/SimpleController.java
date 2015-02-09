@@ -13,7 +13,7 @@ public class SimpleController {
     private EsperService esperService;
 
     @RequestMapping(value = "/")
-    Response home() {
-        return new Response(esperService.returnTime());
+    String home() {
+        return String.valueOf(new Response(esperService.returnTime()));
     }
 }
